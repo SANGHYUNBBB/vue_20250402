@@ -18,7 +18,7 @@ export const useTodos = () => {
       // await new Promise(resolve => setTimeout(resolve, 2000))
 
       const response = await axios.get(API_URL)
-      console.log('response---', response)
+      console.log('response--dlrk-', response)
       todos.value = response.data
     } catch (err) {
       error.value = err.message || '데이터 요청 중 에러'
@@ -32,7 +32,7 @@ export const useTodos = () => {
   const addTodo = async newTodo => {
     try {
       const response = await axios.post(API_URL, newTodo)
-      console.log('response---', response)
+      console.log('response--이거 보내-', response)
       todos.value.push(response.data)
     } catch (err) {
       console.log(err)
